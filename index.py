@@ -1,6 +1,6 @@
 import os
 import time
-
+INSTALLED_PACKAGES = []
 def loop():
     write = input("python-user/home --> ")
 
@@ -20,6 +20,7 @@ time.sleep(1)
 os.system('clear')
 print("welcome to pylinux!!")
 print("make sure you installed this from github and correct repo!")
+print("I know that when you enter a command it says ","bash: command not found","I'm trying to fix it , please be patient:3")
 while True:
  write = input("python-user/home --> ")
  
@@ -31,6 +32,8 @@ while True:
     print("pytfetch -- shows the system information")
     print("apt , package manager.")
     print("shutdown , shuts the system down")
+    print("info , shows the system version")
+    print("devs -- shows the developer of this project :)")
  if write == 'echo':
     writedthing = ""
     echo = input("write the text --> ")
@@ -76,10 +79,17 @@ while True:
        print("1- web-server")
        print("2- python3")
        print("3- shimejiy")
+       print("4- processy")
        install_packages = input("--> ")
-       INSTALLED_PACKAGES = []
        if install_packages == 'web-server':
           INSTALLED_PACKAGES.append("web-server")
+       if install_packages == 'processy':
+           INSTALLED_PACKAGES.append('processy')
+       if install_packages == 'shimejiy':
+           print("shimejiy is not available.")
+       if install_packages == 'python3':
+           INSTALLED_PACKAGES.append('python3')
+           
  elif "web-server" in INSTALLED_PACKAGES and write == 'web-server':
         print("web-server daemon is not running")
         print("start web-server with systemctl enable now web-server.service")
@@ -89,5 +99,23 @@ while True:
     time.sleep(2.5)
     os.system('clear')
     break
+ elif write == 'debug':
+     print("Debug info:")
+     print("Installed packages :", INSTALLED_PACKAGES)
+ elif write == 'clear':
+     os.system('clear')
+ elif 'processy' in INSTALLED_PACKAGES and write == 'processy':
+     os.system('top')
+ elif 'python3' in INSTALLED_PACKAGES and write == 'python3':
+     print("Now write the directory of .py file or the python code to below to run it")
+     python_input = input("--> ")
+     print("Remember , press CTRL-C to exit the python script , if python script is not looped and ends itself , you will return to bash again.")
+     print("Will run in 6.7 seconds... just giving time for user to read")
+     time.sleep(6.7)
+     os.system(f'python3 {python_input}')
+ elif write == 'devs':
+     print("This project is developed by erdem1357123 , just done it for fun :D")
+ elif write == 'erdem1357123':
+     print("You found the easter egg , thanks for trying my github username on the terminal :D I appreciate it :)")
  else:
     pass
