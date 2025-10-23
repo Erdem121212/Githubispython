@@ -4,31 +4,33 @@ import time
 def loop():
     write = input("python-user/home --> ")
 
-print("Screen : PyScreen")
-print("Hardware checking..")
-time.sleep(1)
-print("Checked. Healthy.")
+print("fake pc ")
+print("...")
+time.sleep(3)
+print("System check clear.")
 os.system('clear')
 
-print("Booting from Adata SU650 - 500 GB")
+print("Booting from SSD")
 time.sleep(2)
 os.system('clear')
-print("Loading linux6.16-py")
-time.sleep(2.5)
 print("Loading initramfs")
+time.sleep(2.5)
+print("Loading linux6.16-py")
 time.sleep(1)
 os.system('clear')
 print("welcome to pylinux!!")
-print("")
+print("make sure you installed this from github and correct repo!")
 while True:
  write = input("python-user/home --> ")
  
  if write == 'help':
     print("Help ------")
     print("help -- shows this page")
-    print("ls -- shows the files and directorys on the directory.")
-    print("echo -- shows the text you writed")
+    print("ls -- list directory contents")
+    print("echo - display a line of text")
     print("pytfetch -- shows the system information")
+    print("apt , package manager.")
+    print("shutdown , shuts the system down")
  if write == 'echo':
     writedthing = ""
     echo = input("write the text --> ")
@@ -62,14 +64,14 @@ while True:
     print("CPU : Intel Core i7 2th Gen")
     print("GPU: NVIDIA 1060ti (so old yeah :d)")
     print("Kernel : linux-6.16")
-    print("keske os kullanabilseydim ama okul bilgisayarları bilgisayar donanımı bilgisi alma şifreli oluyor eğer şifreyi girmezsek büyük ihtimal gösteremiyor")
  elif write:
     print("bash: command not found")
  if write == 'info':
        print("pylinux 1.0")
        print("'an fake linux completely made with python'")
  elif write == 'apt':
-       print("apt cant be runned without sudo. Are you sudo??")
+       print("E: Could not open lock life /var/lib/dpkg/lock-frontend - open (13: Permission denied)")
+       print("E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?")
  elif write == 'sudo apt':
        print("1- web-server")
        print("2- python3")
